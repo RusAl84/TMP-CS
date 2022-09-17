@@ -25,16 +25,12 @@ tmp.Print();
 
 //Пузырьковая сортировка
 for (int i = 0; i < tmp.Count(); ++i)
-{
-    for (int j = i; j < tmp.Count() - 1; ++j)
-    {
+    for (int j = 0; j < tmp.Count() - 1; ++j)
         if (tmp.Get(j) > tmp.Get(j + 1))
         {
             int tempValue = tmp.Get(j);
             tmp.Set(j, tmp.Get(j + 1));
             tmp.Set(j + 1, tempValue);
         }
-    }
-}
 
 tmp.Print();
